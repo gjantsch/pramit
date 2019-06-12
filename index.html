@@ -34,11 +34,33 @@
         body {
             font-family: 'Open Sans', sans-serif;
             font-size: 16px;
-
         }
+
+        .titulo {font-size: 18px}
         .home {
             height: 100%;
             background-image: url(images/background.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .agradecimentos {
+            height: 100%;
+            background-image: url(images/agradecimentos.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center top;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            padding: 100px 0px;
+        }
+        .transparencia {
+            /*height: 100%;*/
+            background-image: url(images/transp.png);
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center top;
@@ -52,24 +74,16 @@
             font-family: 'Roboto', sans-serif;
         }
 
-        footer {
-            position: absolute;
-            bottom: 0px;
-            padding: 20px;
-            width: 100%;
-        }
-
         img.header {
             width: 100%;
-            margin-top: 45px;
-            margin-bottom: 38px;
+            /*margin-top: 45px;*/
         }
 
         img.signature, .download {
             width: 100%;
             margin-top: 5px;
             margin-bottom: 5px;
-            margin-left: -60px;
+            /*margin-left: -60px;*/
         }
 
         img.signature-bw {
@@ -107,15 +121,18 @@
 
         .social {
             margin-top: 20px;
-            margin-left: -60px;
+            /*margin-left: -60px;*/
 
         }
 
+        .float-right {
+            float: right;
+        }
 
         .desce {
             position: absolute;
-            bottom: 10px;
-            padding: 20px 20px 0px  0px;
+            bottom: 0px;
+            padding: 20px 0px 0px  0px;
             width: 100%;
         }
 
@@ -123,39 +140,24 @@
             padding: 10px;
             margin-top: 20px;
             margin-bottom: 20px;
-            text-align: right;
+            text-align: left;
             border-bottom: #1b1e21 solid 1px;
-        }
-
-        @media (max-width: 768px)
-        {
-            .desce {
-                bottom: 5px;
-                margin: auto;
-            }
-
-            img.signature, .download, .social {
-                margin-left: 0px;
-            }
-
         }
 
         @media (max-width: 650px)
         {
-
-            body {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 11px;
+            img.signature, .download {
+                width: 100%;
+                margin-top: 5px;
+                margin-bottom: 5px;
+                margin-left: 0px;
             }
 
-            h2 {
-                font-size: 1.5rem;
-            }
+            body {font-size: 11px;}
+            h2 {font-size: 1.5rem;}
 
-            img.header, img.signature, .download {
-                width: 50%;
-                margin: 10px;
-                float: right;
+            img.header {
+                /*margin: 10px;*/
             }
 
             img.signature {
@@ -163,7 +165,6 @@
             }
 
             .download {
-                width: 100%;
                 padding: 2px!important;
             }
 
@@ -171,190 +172,172 @@
                 margin: 10px 0px;
             }
 
-            .desce {
-                position: absolute;
-                bottom: 0px;
-                padding: 20px 20px 0px 20px;
-                width: 100%;
-            }
-
             img.signature-bw {
                 width: 50%;
                 height: 50%;
             }
-        }
-
-        @media screen and (orientation: landscape) and (max-width: 650px) and (min-height: 321px) {
-
-            img.header, img.signature, .download {
-                width: 100%;
-                margin: 5px 0px;
-                float: right;
-            }
-
-            img.signature {
-                width: 180px;
-                height: 100px;
-                margin: 5px 0px;
-                float: right;
-            }
-
-            body {
-                font-family: 'Open Sans', sans-serif;
-                font-size: 12px;
-            }
-        }
-
-        @media (max-height: 360px) and (min-height: 425px)
-        {
-            img.signature, .download, .social {
-                margin-left: 0px;
-            }
-
-            .desce {
-                bottom: 5px;
-                margin: auto;
-            }
-
-            img.signature {
-                width: 150px;
-                height: 70px;
-                margin: 5px 0px;
-                float: right;
-            }
 
         }
 
-        @media (max-height: 375px) and (min-width: 569px)
-        {
-            img.header {
-                width: 100%;
-                margin: 10px;
-                float: right;
-            }
-
-            img.signature, .download, .social {
-                margin-left: 0px;
-            }
-
-        }
-
-        @media screen and (max-width: 568px) and (max-height: 320px) {
-            img.signature {
-                width: 180px;
-                height: 100px;
-                margin: 5px 0px;
-                float: right;
-            }
-
-            img.header, .download {
-                width: 50%;
-                margin: 10px;
-                float: right;
-            }
-
-
-        }
-
-
-
+        .pp-4 {padding: 0em 1.5em 0 1.5em}
+        .pp-2 {padding: .5rem .5rem .0rem .5rem}
+        .data {font-size: 20px; text-align: right}
     </style>
 </head>
 <body>
     <a name="topo"></a>
     <div class="container-fluid h-100 d-flex flex-wrap home">
-        <div class="row justify-content-end">
-            <div class="col col-sm-4">
-                <img src="images/innatura-wsd.png" class="header" alt="In Natura - Pramit">
+        <div class="container-fluid">
+            <div class="row justify-content-end">
+                <div class="col-lg-4 col-sm-6 col-6 align-self-end">
+                    <img src="images/innatura-wsd.png" class="header" alt="In Natura - Pramit">
+                </div>
             </div>
         </div>
 
-        <div class="row justify-content-end w-100 desce">
-            <div class="col col-md-4 col-sm-4 pull-right">
-                <img src="images/pramit-wsd.png" class="signature" alt="Pramit">
+        <div class="clearfix"></div>
+        <div class="container-fluid desce clearfix">
+            <div class="row justify-content-end">
+                <div class="col-lg-3 col-sm-3 col-4 align-self-end">
+                    <img src="images/pramit-wsd.png" class="signature" alt="Pramit">
+                </div>
+            </div>
+            <div class="row justify-content-end pp-4">
+                <div class="p-2 col-lg-3 col-sm-4 col-6 align-self-end">
+                    <a href="" class="btn btn-link pp-2 w-100 download" style="color: black" onclick="alert('Em breve');return false;">baixe o álbum</a>
+                    <div class="social d-flex justify-content-between w-100">
+                        <a href="https://soundcloud.com/pramit-1" target="blank" title="Pramit on SoundCloud"><i class="fab fa-2x fa-soundcloud"></i></a>
+                        <a href="http://www.youtube.com/user/21pramit/videos" target="blank" title="Pramit on Youtube"><i class="fab fa-2x fa-youtube"></i></a>
+                        <a href="https://www.instagram.com/pramitt/" target="blank" title="Pramit on Instagram"><i class="fab fa-2x fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/MusicoPramit/" target="blank" title="Pramit on Facebook"><i class="fab fa-2x fa-facebook"></i></a>
 
-                <a href="" class="btn btn-link p-2 w-100 download" style="color: black" onclick="alert('Em breve');return false;">baixe o álbum</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="social d-flex justify-content-between w-100">
-                    <a href="https://www.facebook.com/pramit.almeida" target="blank" title="Pramit on Facebook"><i class="fab fa-2x fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/pramitt/" target="blank" title="Pramit on Instagram"><i class="fab fa-2x fa-instagram"></i></a>
-                    <a href="http://www.youtube.com/user/21pramit/videos" target="blank" title="Pramit on Youtube"><i class="fab fa-2x fa-youtube"></i></a>
-                    <a href="https://soundcloud.com/pramit-1" target="blank" title="Pramit on SoundCloud"><i class="fab fa-2x fa-soundcloud"></i></a>
+    <div class="container-fluid">
+        <div class="row h-100">
+            <div class="col-lg-6 col-sm-12 col-12" style="padding: 0px;">
+                <img src="images/fotao_fundo_filtro3.jpg" class="header" alt="In Natura - Pramit">
+            </div>
+            <div class="col-lg-6 col-sm-12 col-12">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="images/innatura.png" class="w-100">
+                    </div>
+                    <div class="col-6 align-self-center">
+                        <img src="images/pramit.png" class="w-50 float-right">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="border-bottom: black 3px solid; margin-bottom: 25px"></div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/802613265&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+                    </div>
+                </div>
+                <div class="row align-content-end">
+                    <div class="col-12 align-self-end">
+                        <a href="" class="btn btn-link pp-2 download float-right w-50" style="color: black" onclick="alert('Em breve');return false;">baixar o álbum</a>
+                    </div>
                 </div>
 
-                <!--<div class="social d-flex justify-content-between w-100">-->
-                    <!--<a href="ficha-tecnica.html" alt="Ficha técnica">ficha técnica</a>-->
-                    <!--<a href="ficha-tecnica.html" alt="Ficha técnica">agradecimentos</a>-->
-                <!--</div>-->
+                <div class="row" style="margin-top: 10px">
+                    <div class="col-1">&nbsp;</div>
+                    <div class="col-11">
+                        <h3>Agenda</h3>
+                    </div>
+                </div>
+                <div class="row align-content-center ">
+                    <div class="col-4 data">18 MAI</div>
+                    <div class="col-6 align-self-center">Porto Alegre</div>
+                </div>
+                <div class="row align-content-center ">
+                    <div class="col-4 data">28 MAI</div>
+                    <div class="col-6 align-self-center">Belém</div>
+                </div>
+                <div class="row align-content-center ">
+                    <div class="col-4 data">28 AGO</div>
+                    <div class="col-6 align-self-center">Barcelona - Espanha</div>
+                </div>
+                <div class="row align-content-center ">
+                    <div class="col-4 data">06 SET</div>
+                    <div class="col-6 align-self-center">Porto - Portugal</div>
+                </div>
+                <div class="row align-content-center ">
+                    <div class="col-4 data">10 SET</div>
+                    <div class="col-6 align-self-center">Lisboa - Portugal</div>
+                </div>
+                <p></p>
+                <p></p>
             </div>
         </div>
+    </div>
 
+    <div class="container-fluid agradecimentos">
+
+        <div class="container-fluid transparencia" style="margin: 50px 0px">
+        <div class="row p-2"></div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10 text" style="text-shadow: 0px 1px 2px rgba(255,255,255,0.7);font-weight: 900;color: black;font-size: 18px;">
+                <h2>AGRADECIMENTOS</h2>
+                <p>Comunidade Osho Rachana e ao Namastê por fazer meu coração pulsar, por morar com meus amigos do peito e por não me deixar perder a fé, acreditando que a vida sempre pode ser muito mais. Ao meu velho Eduardo Ribeiro de Almeida por ter me surpreendido ao me oferecer um paitrocínio. Obrigado por sempre estar do meu lado, sem você nada disso teria acontecido, obrigado Pai. Ao meu filho Caetano, por ser o maior inspirador, minha fonte de inspiração que em qualquer hora ajuda o meu coração a compor todas essas canções.
+                </p><p>Aos 3 pilares que fizeram esse disco acontecer, Federico Trindade por ter uma alma musical e ter tido respeito por todas as canções, produzindo o disco com muito amor e amizade. Ao Amaro Neto meu amigo que está surfando comigo as ondas sonoras  desde sempre e se doou de todo coração nas captações do disco e ao Pedrinho Figueiredo por ser o professor de todos e nos ensinar não só sobre música, mas acima de tudo sobre a vida, e se tornou um grande amigo.
+                </p><p>A todos os músicos que compuseram essa obra Bruno Coelho, Albert Reinholdt , Rubens Baggio e aos meus convidados especiais Paulo Novaes, Beatriz Farias, Giovanni Barbieri, Gabriel Gorski , Ricardo Cordeiro, Gabriel Romano, Gisa Haas, Vinícius Marques , Pedrinho Figueiredo, Federico Trindade, Gutcha Ramil, Juily, Neha, Leela, Alima e Shanti Lu obrigado! Ao Aiman Rodolfo braga meu parceiro musical que conhece essa obra como poucos. Ao Rodrigo Braga por ser meu artista predileto. Ao meu irmão JP que veio voando de Belém do Pará trazendo pro Sul toda sua musicalidade cultural Amazônica e mostrando que a música lá do Norte precisa ser escutada. Aos meus parceiros de música Sander Frois, Tiago Rubens e Raquel Leão, meus irmãos que sonham comigo. Sem a presença de vocês esse disco não teria acontecido.
+                </p><p>Ao meu amigo de fé Saulo Fietz pelos toques, ao meu irmão Alexandre Roberto de Oliveira, meu Paulistão que ajudou a me encontrar dentro desse trabalho, abrindo meus olhos pra que direção seguir. Ao meu artista gráfico predileto Dante Vasuman, a minha melhor fotógrafa do disco, meu amor Shunyata Fiorenza, a minha amiga produtora que vai comigo até o inferno e sim vamos sorrindo Cibele Toledo, ao Fabio Pradella  amigo parceiro das câmeras criativas ambos da Tríade Produtora. Ao meu querido compadre Vijay que musicou muitas histórias comigo e fez um site lindo, obrigado! Rafael Pavão do Estúdio “Gaia”, e também a Joana Schneider que fez as excelentes fotos das gravações e a todos os amigos, amores que passaram pela minha vida e me inspiraram e deram sentido para que o “IN Natura” chegasse ao mundo.
+                </p><p>Obrigado
+                </p><p>Pramit</p>
+            </div>
+            <div class="col-1"></div>
+        </div>
+
+        </div>
     </div>
 
     <div class="container-fluid p-2">
 
         <h2>FICHA TÉCNICA</h2>
 
+        <div class="container">
         <div class="row justify-content-between w-100">
-            <div class="col-sm-6 text-center p-4">
+            <div class="col-sm-6 text-left p-4">
 
-                <p><strong>Produtor do disco:</strong> Federico Trindade</p>
-                <p><strong>Gravação:</strong> Amaro Neto</p>
-                <p><strong>Mix/master:</strong> Pedrinho Figueiredo</p>
+                <p><strong>Produção:</strong> Federico Trindade</p>
+                <p><strong>Gravação e Mixagem:</strong> Amaro Neto e Pedrinho Figueiredo</p>
+                <p><strong>Masterização:</strong> Pedrinho Figueiredo</p>
                 <p><strong>Estúdio:</strong> Comunidade Osho Rachana</p>
                 <p><strong>Arranjo de Cordas:</strong> Pablo Trindade</p>
 
             </div>
-            <div class="col-sm-6 text-center p-4">
-                <strong>BANDA</strong>
+            <div class="col-sm-6 text-left p-4">
+                <p><strong>BANDA</strong></p>
 
                 <p><strong>Voz e Violão:</strong> Pramit</p>
                 <p><strong>Percussão:</strong> Bruno Coelho</p>
                 <p><strong>Baixo:</strong> Albert Reinholdt</p>
-                <p><strong>Piano:</strong> Giovanni Barbieri</p>
                 <p><strong>Violão Nylon:</strong> Rubens Baggio</p>
             </div>
         </div>
-
+        </div>
         <h2>CONVIDADOS ESPECIAIS</h2>
 
+        <div class="container">
         <div class="row justify-content-between w-100">
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Amanhecer</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
-                <p><strong>Violão Nylon 2:</strong> Aiman Rodolfo Braga</p>
-                <p><strong>Bandolim:</strong> Gabriel Gorski</p>
+
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">1. Quem sou</strong></p>
+                <p>Pramit</p>
+                <p><strong>Piano:</strong> Giovanni Barbieri</p>
             </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>O Cantor</strong></p>
-                <p><strong>Compositor:</strong> Pramit / Paulo Novaes</p>
-                <p><strong>Voz:</strong> Paulo Novaes</p>
-                <p><strong>Violão Aço:</strong> Sander Fróis</p>
-            </div>
-
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Passarinho</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
-                <p><strong>Bandolim:</strong> Gabriel Gorski</p>
-                <p><strong>Flauta Transversa:</strong> Pedrinho Figueiredo</p>
-            </div>
-
-
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Sinais</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
-                <p><strong>Coro:</strong> Gutcha Ramil, Shanti Lu, Raquel Leão, Manon Galisteo</p>
-                <p><strong>Percussão:</strong> JP Cavalcanti</p>
-                <p><strong>Percussão 2:</strong> Frederico Trindade</p>
-                <p><strong>Viola Caipira:</strong> Sander Fróis</p>
-                <p><strong>Rabeca:</strong> Gutcha Ramil</p>
-            </div>
-
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Emanar</strong></p>
-                <p><strong>Compositor:</strong> Pramit / Tiago Rubens / Giorgio Giuliano</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">2. Emanar</strong></p>
+                <p>Pramit / Tiago Rubens / Giorgio Giuliano</p>
                 <p><strong>Voz:</strong> Thiago Rubens</p>
                 <p><strong>Percussão:</strong> JP Cavalcanti</p>
                 <p><strong>Saxofone Soprano:</strong> Pedrinho Figueiredo</p>
@@ -363,48 +346,73 @@
                 <p><strong>Violão Aço:</strong> Sander Fróis</p>
             </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Natureza</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
-                <p><strong>Voz:</strong> Beatriz Rabello</p>
-                <p><strong>Percussão:</strong> Vinícius Marques</p>
-                <p><strong>Piano Soprano:</strong> Gisa Haas</p>
-                <p><strong>Ukulele:</strong> Tiago Rubens</p>
-                <p><strong>Viola:</strong> Carlos Eduardo Zinani</p>
-                <p><strong>Violino 1:</strong> Rodrigo Duarte Maciel</p>
-                <p><strong>Violino 2:</strong> Wagner Rezer</p>
-            </div>
-
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Por lá</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">3. Por lá</strong></p>
+                <p>Pramit</p>
                 <p><strong>Quintal Vozes:</strong> Raquel Leão, Sander Fróis e Federico Trindade</p>
                 <p><strong>Violão Nylon:</strong> Ricardo Cordeiro</p>
                 <p><strong>Acordeon:</strong> Gabriel Romano</p>
             </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Saudação</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
-                <p><strong>Coro:</strong> Juily, Neha, Leela e Alima</p>
-                <p><strong>Percussão:</strong> JP Cavalcanti</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">4. Saudação</strong></p>
+                <p>Pramit</p>
+                <p><strong>Coro:</strong> Juily, Neha, Manon Galisteo e Alima</p>
+                <p><strong>Arranjo e Percussão:</strong> JP Cavalcanti</p>
                 <p><strong>Banjo:</strong> Rodrigo Braga</p>
                 <p><strong>Backing Vocal:</strong> Aiman Rodolfo Braga</p>
+                <p><strong>Palmas:</strong> JP Cavalcanti e Frederico Trindade</p>
             </div>
 
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">5. Natureza</strong></p>
+                <p>Pramit</p>
+                <p><strong>Voz:</strong> Beatriz Rabello</p>
+                <p><strong>Percussão:</strong> Vinícius Marques</p>
+                <p><strong>Piano:</strong> Gisa Haas</p>
+                <p><strong>Viola:</strong> Carlos Eduardo Zinani</p>
+                <p><strong>Violino 1:</strong> Rodrigo Duarte Maciel</p>
+                <p><strong>Violino 2:</strong> Wagner Rezer</p>
+                <p><strong>Cello:</strong> André Wentz</p>
+            </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Bem Vindo</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">6. Passarinho</strong></p>
+                <p>Pramit</p>
+                <p><strong>Bandolim:</strong> Gabriel Gorski</p>
+                <p><strong>Flauta Transversa:</strong> Pedrinho Figueiredo</p>
+            </div>
+
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">7. Amanhecer</strong></p>
+                <p>Pramit</p>
+                <p><strong>Violão Nylon 2:</strong> Aiman Rodolfo Braga</p>
+                <p><strong>Bandolim:</strong> Gabriel Gorski</p>
+                <p><strong>Piano:</strong> Giovanni Barbieri</p>
+            </div>
+
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">8. O Cantor</strong></p>
+                <p>Pramit / Paulo Novaes</p>
+                <p><strong>Voz:</strong> Paulo Novaes</p>
+                <p><strong>Viola Caipira:</strong> Sander Fróis</p>
+                <p><strong>Percussão:</strong> JP Cavalcanti</p>
+                <p><strong>Piano:</strong> Giovanni Barbieri</p>
+            </div>
+
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">9. Bem Vindo</strong></p>
+                <p>Pramit</p>
                 <p><strong>Cello:</strong> André Wentz</p>
                 <p><strong>Viola:</strong> Carlos Eduardo Zinani</p>
                 <p><strong>Violino 1:</strong> Rodrigo Duarte Maciel</p>
                 <p><strong>Violino 2:</strong> Wagner Rezer</p>
+                <p><strong>Piano:</strong> Giovanni Barbieri</p>
             </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Te ter</strong></p>
-                <p><strong>Compositor:</strong> Pramit e Raquel Leão</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">10. Te ter</strong></p>
+                <p>Pramit e Raquel Leão</p>
                 <p><strong>Voz:</strong> Raquel Leão</p>
                 <p><strong>Cello:</strong> André Wentz</p>
                 <p><strong>Viola:</strong> Carlos Eduardo Zinani</p>
@@ -412,13 +420,18 @@
                 <p><strong>Violino 2:</strong> Wagner Rezer</p>
             </div>
 
-            <div class="col-sm-4 text-center p-4">
-                <p><strong>Quem sou</strong></p>
-                <p><strong>Compositor:</strong> Pramit</p>
+            <div class="col-sm-4 text-left p-4">
+                <p><strong class="titulo">11. Os sinais</strong></p>
+                <p>Pramit</p>
+                <p><strong>Coro:</strong> Gutcha Ramil, Shanti Lu, Raquel Leão, Manon Galisteo</p>
+                <p><strong>Percussão:</strong> JP Cavalcanti e Frederico Trindade</p>
+                <p><strong>Viola Caipira:</strong> Sander Fróis</p>
+                <p><strong>Rabeca:</strong> Gutcha Ramil</p>
             </div>
 
         </div>
 
+        </div>
         <div class="row justify-content-center align-bottom">
             <img src="images/pramit.png" class="signature-bw">
         </div>
